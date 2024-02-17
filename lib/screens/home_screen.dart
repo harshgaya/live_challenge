@@ -110,8 +110,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                             });
                                           },
                                             child: PlaylistWidget(name: 'Relaxing Instrumentals',)),
-                                        PlaylistWidget(name: 'Today Hit',),
-                                        PlaylistWidget(name: 'Workout Energy',),
+                                        InkWell(
+                                          onTap: (){
+                                            Navigator.of(context).pushNamed(PlaylistScreen.routeName,arguments: {
+
+                                            });
+                                          },
+                                            child: PlaylistWidget(name: 'Today Hit',)),
+                                        InkWell(
+                                          onTap: (){
+                                            Navigator.of(context).pushNamed(PlaylistScreen.routeName,arguments: {
+
+                                            });
+                                          },
+
+                                            child: PlaylistWidget(name: 'Workout Energy',)),
                                       ],
                                     ),
                                   ),

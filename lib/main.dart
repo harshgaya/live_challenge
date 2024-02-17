@@ -5,6 +5,7 @@ import 'package:untitled2/models/music_model.dart';
 import 'package:untitled2/provider/player_service.dart';
 import 'package:untitled2/screens/home_screen.dart';
 import 'package:untitled2/screens/landing_screen.dart';
+import 'package:untitled2/screens/player_screen.dart';
 import 'package:untitled2/screens/playlist_screen.dart';
 import 'package:untitled2/services/database_helper.dart';
 
@@ -42,8 +43,9 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
        routes: {
-         PlaylistScreen.routeName:(_)=>PlaylistScreen(),
-         HomeScreen.routeName:(_)=>HomeScreen(),
+         PlaylistScreen.routeName:(_)=>const PlaylistScreen(),
+         HomeScreen.routeName:(_)=>const HomeScreen(),
+         PlayerScreen.routeName:(_)=>const PlayerScreen(),
        },
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',

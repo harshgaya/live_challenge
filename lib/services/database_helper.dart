@@ -21,6 +21,5 @@ class DatabaseHelper{
       return [];
     }
     return List.generate(maps.length, (index) => Music.fromJson(maps[index]));
-
   }
 }

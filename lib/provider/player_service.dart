@@ -1,9 +1,19 @@
+
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 
 class AudioPlayerService extends ChangeNotifier{
   final AudioPlayer _audioPlayer=AudioPlayer();
   bool _isPlaying=false;
+  String songName='Today_Hit/Astronaut-In-The-Ocean.mp3';
+
+  bool get isPlaying => _isPlaying;
+
+  setSong(String songUrl){
+    songName=songUrl;
+    notifyListeners();
+  }
 
   AudioPlayerService(){
     _audioPlayer.onPlayerStateChanged.listen((state) {
@@ -33,6 +43,11 @@ class AudioPlayerService extends ChangeNotifier{
     }
     _isPlaying=true;
     notifyListeners();
+  }
+  void pause(){
+    if(_isPlaying){
+      _audioPlayer.pause();
+    }
   }
   @override
   void dispose(){
